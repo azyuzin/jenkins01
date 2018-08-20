@@ -34,8 +34,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo '\u2778 Stage 3 - Deploy'
-		sh 'echo hello comrade'i
-
+		
                 echo "Hello ${params.PERSON}"
 
                 echo "Biography: ${params.BIOGRAPHY}"
