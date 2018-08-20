@@ -9,21 +9,21 @@ pipeline {
     stages {
         stage('Build') { 
             steps { 
-                stage '\u2776 Stage 1 - Build'
+                echo '\u2776 Stage 1 - Build'
                 echo "\u2600 BUILD_URL=${env.BUILD_URL}"
             }
         }
         stage('Test'){
             steps {
-			    stage '\u2777 Stage 2 - Test'
+                echo "\u2777 Stage 2 - Test"
                 def workspace = pwd()
                 echo "\u2600 workspace=${workspace}"
             }
         }
         stage('Deploy') {
             steps {
-			    stage '\u2778 Stage 3 - Deploy'
-				sh 'echo hello comrade'
+                echo '\u2778 Stage 3 - Deploy'
+		sh 'echo hello comrade'
             }
         }
     }
