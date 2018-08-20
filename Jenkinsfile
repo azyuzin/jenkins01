@@ -29,15 +29,4 @@ catch (exc) {
  err = caughtError
  currentBuild.result = "FAILURE"
 */
-} finally {
-  
- (currentBuild.result != "ABORTED") && node("master") {
-     step(echo "Done!!! :) ")
- }
- 
- // Must re-throw exception to propagate error:
- if (err) {
-     throw err
- }
 }
-
